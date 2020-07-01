@@ -9,7 +9,7 @@ int main() {
 	int n, s; cin >> n >> s;
 	vector<int> arr(n);
 	for (int i = 0; i < n; i++) cin >> arr[i];
-	int left = 0, right = 0, sum = arr[0], ans = 123456789;
+	int left = 0, right = 0, sum = arr[0], ans = 100001;
 	while (left <= right && right < n) {
 		if (sum < s) {
 			sum += arr[++right];
@@ -23,7 +23,7 @@ int main() {
 			sum -= arr[left++];
 		}
 	}
-	if (ans == 123456789) ans = 0;
+	if (ans == 100001) ans = 0;
 	cout << ans << "\n";
 	return 0;
 }
